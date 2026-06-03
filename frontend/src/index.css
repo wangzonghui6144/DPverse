@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400 dark:bg-slate-600;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/60 dark:border-slate-700/60 rounded-2xl shadow-sm;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-500 via-primary-600 to-medical-500 bg-clip-text text-transparent;
+  }
+
+  .stat-value {
+    @apply text-3xl font-bold tracking-tight;
+  }
+
+  .stat-label {
+    @apply text-sm text-slate-500 dark:text-slate-400 font-medium;
+  }
+
+  .section-title {
+    @apply text-lg font-semibold text-slate-800 dark:text-slate-200;
+  }
+
+  .chip {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium
+           bg-primary-50 text-primary-700 dark:bg-primary-950 dark:text-primary-300
+           border border-primary-200 dark:border-primary-800;
+  }
+
+  .chip-active {
+    @apply chip bg-primary-500 text-white border-primary-500 dark:bg-primary-400 dark:text-white dark:border-primary-400;
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: fadeIn 0.5s ease-out, slideUp 0.4s ease-out;
+  }
+}
