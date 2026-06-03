@@ -90,7 +90,3 @@ DAGG（Data-driven Analysis of Genotype-to-phenotype Graphs）是一个三阶段
 1. **基因型层** — 将突变映射到基因级效应（突变类型、VAF、癌基因/抑癌基因）
 2. **通路层** — 通过因果网络将基因效应传播到信号通路
 3. **表型层** — 将通路活性聚合为细胞功能谱（500+维APSP）
-
-## License
-
-Proprietary — 哲源科技
